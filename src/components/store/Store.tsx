@@ -23,7 +23,7 @@ export const Store = () => {
   }, []);
   const getStore = async function () {
     try {
-      const res = await fetch("http://localhost:8080/store/");
+      const res = await fetch("https://multienda-api.3.us-1.fl0.io/store/");
       const data = await res.json();
 
       console.log(data[0].products);

@@ -26,7 +26,7 @@ export function Categories({ storeName }: Props) {
       //   throw new Error("no se encontro la tienda");
       // }
       const res = await fetch(
-        "http://localhost:8080/store/" + storeName
+        "https://multienda-api.3.us-1.fl0.io/store/" + storeName
       );
       const data = await res.json();
 

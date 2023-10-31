@@ -31,7 +31,9 @@ export function Product() {
         throw new Error("no se encontro el producto id");
       }
 
-      const res = await fetch("http://localhost:8080/store/" + storeName);
+      const res = await fetch(
+        "https://multienda-api.3.us-1.fl0.io/store/" + storeName
+      );
       const data = await res.json();
 
       const foods: any[] = data.products;
