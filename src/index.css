@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .icon{
+      @apply text-2xl
+  }
+  .container{
+
+      @apply max-w-screen-lg mx-auto
+  }
+
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+
+  .color-neutral{
+      background-color: #f5f5f5;
+  }
+  .text-color-primary{
+      @apply text-pink-400
+  }
+
+  .category-title{
+      @apply text-2xl lg:text-3xl
+  }
+
+  .category-text{
+      @apply text-lg mt-1 lg:text-xl
+  }
+}
+
+
+.section-categorie::before{
+  content: '';
+  width: 100%;
+  height: 5px;
+  display: flex;
+  color:#f5f5f5;
+  background-color: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+  bottom: 200%;
+  z-index: 10000;
+}
+
+/* .swiper {
+
+} */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem !important;
+}
+
+/* .category-img{
+  min-height: 80px; 
+  min-width: 80px;
+} */
+
+.swiper-category {
+  padding-bottom: 2rem !important;
+}
+.swiper-category .swiper-slide{
+  /* width: auto !important; */
+  background-color: transparent;
+
+
+}
+
+
+.animation-fade-in{
+  animation: animationFadeIn 0.5s ease forwards;
+}
+
+@keyframes animationFadeIn {
+
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+      
+}
+
+
+
+
+/* ---------------navbar---------- */
+
+.menu-mobile{
+  /* background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)); */
+
+  transition: .3s all ease-in-out;
+  transform: translateX(-100%);
+
+}
+.menu-mobile--active{
+  transform: translateX(0%);
+  background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+
+}
+/*
+.menu-mobile::after{
+  content: 'a';
+  display: flex;
+  background-color: black;
+  width: 100%;
+  position: absolute;
+} */
